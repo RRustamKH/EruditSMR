@@ -7,4 +7,5 @@ Disallow: /cgi-bin/
 Disallow: /*?*
 Disallow: /search/
 
-Sitemap: https://rrustamkh.github.io/EruditSMR
+
+Sitemap: https://rrustamkh.github.io/EruditSMR/sitemap.xml
