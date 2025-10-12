@@ -79,6 +79,7 @@
         .social-top a {
             color: black;
             text-decoration: none;
+            font-size: 1.3em; /* Увеличили на 30% */
         }
 
         /* Навигация */
@@ -194,7 +195,7 @@
 
         .hero-content p {
             font-size: 1.4rem;
-            margin-bottom: 3.5rem; /* Увеличил отступ для кнопки "Наши услуги" */
+            margin-bottom: 1.5rem;
             max-width: 800px;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
             line-height: 1.8;
@@ -282,13 +283,6 @@
             margin-bottom: 1.5rem;
         }
 
-        .about-text .btn-container {
-            width: 100%;
-            display: flex;
-            justify-content: flex-start; /* Выравнивание кнопки по левому краю */
-            margin-top: 1rem; /* Добавил отступ сверху для кнопки */
-        }
-
         .about-image {
             flex: 1;
             border-radius: 10px;
@@ -348,27 +342,6 @@
             transform: scale(1.05); /* Уменьшил масштабирование при наведении */
         }
 
-        .service-header {
-            background-color: var(--teal); /* Изменил цвет на серый */
-            color: white;
-            padding: 1.5rem;
-        }
-
-        .service-header h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .service-price {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .service-age {
-            font-style: italic;
-        }
-
         .service-content {
             padding: 1.5rem;
         }
@@ -381,6 +354,23 @@
         .service-content li {
             margin-bottom: 0.5rem;
             line-height: 1.5;
+        }
+
+        .service-price-age {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            font-weight: bold;
+        }
+
+        .service-price {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-age {
+            font-style: italic;
+            color: #666;
         }
 
         /* Преподаватели */
@@ -580,6 +570,7 @@
             border-radius: 50%;
             color: white;
             transition: all 0.3s;
+            font-size: 1.3em; /* Увеличили на 30% */
         }
 
         .social-links a:hover {
@@ -605,10 +596,6 @@
         @media (max-width: 992px) {
             .about-content {
                 flex-direction: column;
-            }
-            
-            .about-text .btn-container {
-                justify-content: center; /* Центрируем кнопку на мобильных */
             }
             
             .teacher-content {
@@ -640,6 +627,11 @@
                 flex-direction: column;
                 gap: 0.5rem;
                 text-align: center;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
             }
             
             .navbar {
@@ -694,6 +686,10 @@
             
             .teacher-photo {
                 max-width: 400px;
+            }
+
+            .hero {
+                background-attachment: scroll;
             }
         }
 
@@ -777,7 +773,7 @@
         <div class="hero-content fade-in">
             <h1>Центр развития Эрудит</h1>
             <p>Вверх к успеху вместе!</p>
-            <a href="#contact" class="btn">Записаться на занятие</a>
+            <!-- Кнопка "Записаться" удалена по Правке 2 -->
         </div>
     </section>
 
@@ -789,12 +785,10 @@
         </div>
         <div class="about-content">
             <div class="about-text">
-                <h3>Мы создаем будущее через образование</h3>
+                <!-- Заголовок "Мы создаем будущее через образование" удален по Правке 3 -->
                 <p>Школа «ЭРУДИТ» приглашает детей и подростков на тренинговые курсы по развитию памяти, внимания, скорочтения с использованием приемов мнемотехники (на основе методики проф. И. Ю. Матюгина, «Школа ЭЙДЕТИКИ» г. Москва).</p>
                 <p>Наш центр специализируется на  РАЗВИВАЮЩИХ ЗАНЯТИЯХ для детей 3-5 лет и КОМПЛЕКСНОЙ ПОДГОТОВКЕ К ШКОЛЕ детей 6 лет по современным интенсивным методикам обучения с нейропсихологическим подходом.</p>
-                <div class="btn-container">
-                    <a href="#services" class="btn">Наши услуги</a>
-                </div>
+                <!-- Кнопка "Наши услуги" удалена по Правке 4 -->
             </div>
             <div class="about-image">
                 <img src="images/Centr_razv.jpg" alt="Центр развития Эрудит">
@@ -814,11 +808,6 @@
                 <div class="service-image">
                     <img src="images/lad.jpg" alt="Курс Ладошки">
                 </div>
-                <div class="service-header">
-                    <h3>Ладошки</h3>
-                    <div class="service-price">2800 руб/мес</div>
-                    <div class="service-age">Возраст: 4-5 лет</div>
-                </div>
                 <div class="service-content">
                     <p><strong>Продолжительность:</strong> 1 раз в неделю по 55 минут. 10 месяцев (сентябрь - июнь)</p>
                     <p>Нейропрограмма для всестороннего развития ребенка. Каждое занятие состоит из 4 блоков:</p>
@@ -828,6 +817,10 @@
                         <li>Развитие ПАМЯТИ, ВНИМАНИЯ И МЫШЛЕНИЯ</li>
                         <li>Развитие РЕЧИ - логопедическая разминка, чистоговорки, песенки</li>
                     </ul>
+                    <div class="service-price-age">
+                        <div class="service-price">2800 руб/мес</div>
+                        <div class="service-age">Возраст: 4-5 лет</div>
+                    </div>
                 </div>
             </div>
 
@@ -835,11 +828,6 @@
             <div class="service-card">
                 <div class="service-image">
                     <img src="images/lyub.jpg" alt="Курс Любопышки">
-                </div>
-                <div class="service-header">
-                    <h3>Любопышки</h3>
-                    <div class="service-price">2800 руб/мес</div>
-                    <div class="service-age">Возраст: 5-6 лет</div>
                 </div>
                 <div class="service-content">
                     <p><strong>Продолжительность:</strong> 1 раз в неделю по 55 минут. 10 месяцев (сентябрь - июнь)</p>
@@ -852,6 +840,10 @@
                         <li>Знакомство со звуками; обучение чтению «с нуля»</li>
                         <li>Изучение цифр, начальные математические знания</li>
                     </ul>
+                    <div class="service-price-age">
+                        <div class="service-price">2800 руб/мес</div>
+                        <div class="service-age">Возраст: 5-6 лет</div>
+                    </div>
                 </div>
             </div>
 
@@ -859,11 +851,6 @@
             <div class="service-card">
                 <div class="service-image">
                     <img src="images/school.jpg" alt="Подготовка к школе">
-                </div>
-                <div class="service-header">
-                    <h3>Комплексная подготовка к школе</h3>
-                    <div class="service-price">4800 руб/мес</div>
-                    <div class="service-age">Возраст: 6-7 лет</div>
                 </div>
                 <div class="service-content">
                     <p><strong>Продолжительность:</strong> 2 раза в неделю по 70 минут. 9 месяцев</p>
@@ -876,6 +863,10 @@
                         <li>Развитие логики и мышления</li>
                         <li>Развитие моторики руки, изучение каллиграфии</li>
                     </ul>
+                    <div class="service-price-age">
+                        <div class="service-price">4800 руб/мес</div>
+                        <div class="service-age">Возраст: 6-7 лет</div>
+                    </div>
                 </div>
             </div>
 
@@ -883,11 +874,6 @@
             <div class="service-card">
                 <div class="service-image">
                     <img src="images/kalig.jpg" alt="Каллиграфия">
-                </div>
-                <div class="service-header">
-                    <h3>Каллиграфия</h3>
-                    <div class="service-price">4800 руб/мес</div>
-                    <div class="service-age">Возраст: от 7 лет</div>
                 </div>
                 <div class="service-content">
                     <p><strong>Продолжительность:</strong> 2 раза в неделю по 60 минут. От 4 месяцев</p>
@@ -899,6 +885,10 @@
                         <li>Активизация обоих полушарий головного мозга</li>
                         <li>Повышение орфографической грамотности</li>
                     </ul>
+                    <div class="service-price-age">
+                        <div class="service-price">4800 руб/мес</div>
+                        <div class="service-age">Возраст: от 7 лет</div>
+                    </div>
                 </div>
             </div>
 
@@ -906,11 +896,6 @@
             <div class="service-card">
                 <div class="service-image">
                     <img src="images/skor.jpg" alt="Скорочтение">
-                </div>
-                <div class="service-header">
-                    <h3>Скорочтение и развитие памяти</h3>
-                    <div class="service-price">4800 руб/мес</div>
-                    <div class="service-age">Возраст: от 7 лет</div>
                 </div>
                 <div class="service-content">
                     <p><strong>Продолжительность:</strong> 2 раза в неделю по 60 минут. 6 месяцев</p>
@@ -923,6 +908,10 @@
                         <li>Составление мэйнд-карт</li>
                         <li>Комплексное развитие интеллекта</li>
                     </ul>
+                    <div class="service-price-age">
+                        <div class="service-price">4800 руб/мес</div>
+                        <div class="service-age">Возраст: от 7 лет</div>
+                    </div>
                 </div>
             </div>
 
@@ -930,11 +919,6 @@
             <div class="service-card">
                 <div class="service-image">
                     <img src="images/1klas.jpg" alt="Первоклассник">
-                </div>
-                <div class="service-header">
-                    <h3>Первоклассник</h3>
-                    <div class="service-price">4800 руб/мес</div>
-                    <div class="service-age">Возраст: 1 класс</div>
                 </div>
                 <div class="service-content">
                     <p><strong>Продолжительность:</strong> 2 занятия в неделю по 60 минут. 9 месяцев</p>
@@ -946,6 +930,10 @@
                         <li>Математика (состав числа, вычисления в пределах 20)</li>
                         <li>Письмо (постановка почерка)</li>
                     </ul>
+                    <div class="service-price-age">
+                        <div class="service-price">4800 руб/мес</div>
+                        <div class="service-age">Возраст: 1 класс</div>
+                    </div>
                 </div>
             </div>
 
@@ -953,11 +941,6 @@
             <div class="service-card">
                 <div class="service-image">
                     <img src="images/2klas.jpg" alt="Второклассник">
-                </div>
-                <div class="service-header">
-                    <h3>Второклассник</h3>
-                    <div class="service-price">4800 руб/мес</div>
-                    <div class="service-age">Возраст: 2 класс</div>
                 </div>
                 <div class="service-content">
                     <p><strong>Продолжительность:</strong> 2 раза в неделю по 60 минут. Учебный год</p>
@@ -968,6 +951,10 @@
                         <li>Решение примеров и задач</li>
                         <li>Развитие внимания, памяти, образного мышления</li>
                     </ul>
+                    <div class="service-price-age">
+                        <div class="service-price">4800 руб/мес</div>
+                        <div class="service-age">Возраст: 2 класс</div>
+                    </div>
                 </div>
             </div>
 
@@ -975,11 +962,6 @@
             <div class="service-card">
                 <div class="service-image">
                     <img src="images/3klas.jpg" alt="Третьеклассник">
-                </div>
-                <div class="service-header">
-                    <h3>Третьеклассник</h3>
-                    <div class="service-price">4800 руб/мес</div>
-                    <div class="service-age">Возраст: 3 класс</div>
                 </div>
                 <div class="service-content">
                     <p><strong>Продолжительность:</strong> 2 раза в неделю по 60 минут</p>
@@ -990,39 +972,19 @@
                         <li>Поддержка по русскому языку и математике</li>
                         <li>Гимнастика для мозга на каждом уроке</li>
                     </ul>
+                    <div class="service-price-age">
+                        <div class="service-price">4800 руб/мес</div>
+                        <div class="service-age">Возраст: 3 класс</div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Курс 9 -->
-            <div class="service-card">
-                <div class="service-image">
-                    <img src="images/master.jpg" alt="Мастер-классы">
-                </div>
-                <div class="service-header">
-                    <h3>Мастер-классы по выходным</h3>
-                    <div class="service-price">650 руб/час</div>
-                    <div class="service-age">Возраст: от 5 лет</div>
-                </div>
-                <div class="service-content">
-                    <p><strong>Продолжительность:</strong> По субботам с 12:00, 60-90 минут</p>
-                    <p>Занятия для взрослых и детей:</p>
-                    <ul>
-                        <li>Лепка под наблюдением педагога</li>
-                        <li>Рисование под наблюдением педагога</li>
-                        <li>Творческое развитие</li>
-                    </ul>
-                </div>
-            </div>
+            <!-- Курс 9 УДАЛЕН по Правке 5 -->
 
             <!-- Курс 10 -->
             <div class="service-card">
                 <div class="service-image">
                     <img src="images/indiv.jpg" alt="Индивидуальные занятия">
-                </div>
-                <div class="service-header">
-                    <h3>Индивидуальные занятия</h3>
-                    <div class="service-price">1000 руб/час</div>
-                    <div class="service-age">Возраст: 7-10 лет</div>
                 </div>
                 <div class="service-content">
                     <p><strong>Продолжительность:</strong> 60 минут</p>
@@ -1032,6 +994,10 @@
                         <li>Чтение, математика и русский язык для учеников 1-4 кл.</li>
                         <li>Коррекция почерка</li>
                     </ul>
+                    <div class="service-price-age">
+                        <div class="service-price">1000 руб/час</div>
+                        <div class="service-age">Возраст: 7-10 лет</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1041,7 +1007,7 @@
     <section id="teachers">
         <div class="section-title">
             <h2>Наши преподаватели</h2>
-            <p>Познакомьтесь с нашей командой профессионалов</p>
+            <!-- Фраза "Познакомьтесь с нашей командой профессионалов" удалена по Правке 7 -->
         </div>
         <div class="teacher-section">
             <div class="teacher-card">
@@ -1195,7 +1161,4 @@
         });
     </script>
 </body>
-
 </html>
-
-
